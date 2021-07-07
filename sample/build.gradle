@@ -23,7 +23,7 @@ android {
         versionCode 1
         versionName rootProject.ext.libraryVersion
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
         all {
@@ -56,11 +56,11 @@ dependencies {
     //modules
     compile project(':ChipsLayoutManager')
     //support libraries
-    compile "com.android.support:appcompat-v7:$supportVersion"
-    compile "com.android.support:design:$supportVersion"
-    compile "com.android.support:recyclerview-v7:$supportVersion"
-    compile "com.android.support:cardview-v7:$supportVersion"
-    compile "com.android.support:support-v4:$supportVersion"
+    compile 'androidx.appcompat:appcompat:1.0.0'
+    compile 'com.google.android.material:material:1.0.0'
+    compile 'androidx.recyclerview:recyclerview:1.0.0'
+    compile 'androidx.cardview:cardview:1.0.0'
+    compile 'androidx.legacy:legacy-support-v4:1.0.0'
     //3rd party libraries
     compile('com.mikepenz:materialdrawer:5.8.0@aar') {
         transitive = true
@@ -73,13 +73,13 @@ dependencies {
     compile 'com.google.firebase:firebase-crash:10.0.1'
     testCompile 'junit:junit:4.12'
     //android tests
-    androidTestCompile "com.android.support:support-annotations:$supportVersion"
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
-    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'androidx.annotation:annotation:1.0.0'
+    androidTestCompile 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestCompile 'androidx.test.ext:junit:1.1.1'
     androidTestCompile 'org.mockito:mockito-core:1.+'
     androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
     androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
-    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.2') {
+    androidTestCompile('androidx.test.espresso:espresso-contrib:3.1.0') {
         //this library has conflicts with app dependencies
         exclude group: 'com.android.support', module: 'appcompat'
         exclude group: 'com.android.support', module: 'support-v4'

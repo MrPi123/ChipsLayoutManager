@@ -1,6 +1,7 @@
 package com.beloo.widget.chipslayoutmanager;
 
-import android.support.annotation.IntRange;
+
+import androidx.annotation.IntRange;
 
 import com.beloo.widget.chipslayoutmanager.layouter.breaker.IRowBreaker;
 
